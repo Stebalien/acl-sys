@@ -135,8 +135,6 @@
 <span id="93">93</span>
 <span id="94">94</span>
 <span id="95">95</span>
-<span id="96">96</span>
-<span id="97">97</span>
 </pre><pre class='rust '>
 <span class='comment'>//  Copyright (C) 2015 Steven Allen</span>
 <span class='comment'>//</span>
@@ -228,10 +226,8 @@
     <span class='comment'>/*=== Object manipulation ===*/</span>
 
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_delete_def_file</span>(<span class='ident'>path</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
-
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_get_fd</span>(<span class='ident'>path</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>, <span class='ident'>typ</span>: <span class='ident'>acl_type_t</span>) <span class='op'>-&gt;</span> <span class='ident'>acl_t</span>;
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_get_file</span>(<span class='ident'>acl</span>: <span class='ident'>acl_t</span>, <span class='ident'>len</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>ssize_t</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_char</span>;
-
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_get_fd</span>(<span class='ident'>fd</span>: <span class='ident'>c_int</span>) <span class='op'>-&gt;</span> <span class='ident'>acl_t</span>;
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_get_file</span>(<span class='ident'>path</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>, <span class='ident'>typ</span>: <span class='ident'>acl_type_t</span>) <span class='op'>-&gt;</span> <span class='ident'>acl_t</span>;
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_set_fd</span>(<span class='ident'>fd</span>: <span class='ident'>c_int</span>, <span class='ident'>acl</span>: <span class='ident'>acl_t</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>acl_set_file</span>(<span class='ident'>path</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>, <span class='ident'>typ</span>: <span class='ident'>acl_type_t</span>, <span class='ident'>acl</span>: <span class='ident'>acl_t</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
 }

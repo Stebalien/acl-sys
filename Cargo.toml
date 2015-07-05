@@ -1,0 +1,13 @@
+[package]
+name = "acl-sys"
+version = "1.0.0"
+authors = ["Steven Allen <steven@stebalien.com>"]
+description = "FFI interface for POSIX Access Control Lists"
+
+documentation = "https://stebalien.github.io/acl-sys/acl_sys/"
+repository = "https://github.com/Stebalien/acl-sys"
+keywords = ["acl", "filesystem", "fs", "posix", "bindings"]
+license = "LGPLv2.1"
+
+[dependencies]
+libc = "*"

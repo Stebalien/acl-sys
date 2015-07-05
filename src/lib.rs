@@ -88,10 +88,8 @@ extern "C" {
     /*=== Object manipulation ===*/
 
     pub fn acl_delete_def_file(path: *const c_char) -> c_int;
-
-    pub fn acl_get_fd(path: *const c_char, typ: acl_type_t) -> acl_t;
-    pub fn acl_get_file(acl: acl_t, len: *mut ssize_t) -> *mut c_char;
-
+    pub fn acl_get_fd(fd: c_int) -> acl_t;
+    pub fn acl_get_file(path: *const c_char, typ: acl_type_t) -> acl_t;
     pub fn acl_set_fd(fd: c_int, acl: acl_t) -> c_int;
     pub fn acl_set_file(path: *const c_char, typ: acl_type_t, acl: acl_t) -> c_int;
 }

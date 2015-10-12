@@ -10,4 +10,4 @@ keywords = ["acl", "filesystem", "fs", "posix", "bindings"]
 license = "LGPL-2.1"
 
 [dependencies]
-libc = "*"
+libc = "0.1"

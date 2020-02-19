@@ -9,5 +9,6 @@ repository = "https://github.com/Stebalien/acl-sys"
 keywords = ["acl", "filesystem", "fs", "posix", "bindings"]
 license = "LGPL-2.1"
 
-[dependencies]
-libc = "0.2"
+[dependencies.libc]
+version= "0.2"
+default-features = false

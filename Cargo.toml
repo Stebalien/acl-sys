@@ -1,6 +1,6 @@
 [package]
 name = "acl-sys"
-version = "1.0.1"
+version = "1.2.0"
 authors = ["Steven Allen <steven@stebalien.com>"]
 description = "FFI interface for POSIX Access Control Lists"
 

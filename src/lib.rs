@@ -45,6 +45,9 @@ pub const ACL_GROUP: acl_tag_t = 0x08;
 pub const ACL_MASK: acl_tag_t = 0x10;
 pub const ACL_OTHER: acl_tag_t = 0x20;
 
+pub const ACL_FIRST_ENTRY: c_int = 0;
+pub const ACL_NEXT_ENTRY: c_int = 1;
+
 #[link(name = "acl")]
 extern "C" {
     /*=== ACL manipulation ===*/

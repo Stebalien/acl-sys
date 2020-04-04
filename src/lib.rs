@@ -48,7 +48,8 @@ pub const ACL_OTHER: acl_tag_t = 0x20;
 pub const ACL_FIRST_ENTRY: c_int = 0;
 pub const ACL_NEXT_ENTRY: c_int = 1;
 
-#[link(name = "acl")]
+// On Linux link to libacl, other OSes have this in libc and need no annotation
+#[cfg_attr(target_os = "linux", link(name = "acl"))]
 extern "C" {
     /*=== ACL manipulation ===*/
 

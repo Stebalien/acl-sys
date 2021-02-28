@@ -66,13 +66,13 @@ extern "C" {
     pub fn acl_get_entry(acl: acl_t, entry_id: c_int, entry: *mut acl_entry_t) -> c_int;
 
     /* Manipulate ACL entry permissions */
-
     pub fn acl_add_perm(permset: acl_permset_t, perm: acl_perm_t) -> c_int;
     pub fn acl_calc_mask(acl: *mut acl_t) -> c_int;
     pub fn acl_clear_perms(permset: acl_permset_t) -> c_int;
     pub fn acl_delete_perms(permset: acl_permset_t, perm: acl_perm_t) -> c_int;
     pub fn acl_get_permset(entry: acl_entry_t, permset: *mut acl_permset_t) -> c_int;
     pub fn acl_set_permset(entry: acl_entry_t, permset: acl_permset_t) -> c_int;
+    pub fn acl_get_perm(permset: acl_permset_t, perm: acl_perm_t) -> c_int;
 
     /* Manipulate ACL entry tag type and qualifier */
 

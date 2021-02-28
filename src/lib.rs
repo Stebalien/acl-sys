@@ -88,6 +88,7 @@ extern "C" {
     pub fn acl_from_text(buf: *const c_char) -> acl_t;
     pub fn acl_size(acl: acl_t) -> ssize_t;
     pub fn acl_to_text(acl: acl_t, len: *mut ssize_t) -> *mut c_char;
+    pub fn acl_to_any_text(acl: acl_t, prefix:*const c_char, separator: c_char, options:c_int) -> *mut c_char;
 
     /*=== Object manipulation ===*/
 
